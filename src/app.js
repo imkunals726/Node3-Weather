@@ -1,5 +1,8 @@
 const express = require( 'express' )
 const app	  = express( )
+const port 	  = process.env.PORT || 8000
+
+
 const path 	  = require( 'path' )
 const ejs 	  = require( 'ejs' )
 const forecast = require( './utils/forecast' )
@@ -72,6 +75,6 @@ app.get( '*' , ( req , res ) =>{
 	res.render( '404' , { 'message' : 'Page Not found' })
 });
 
-app.listen( 8000 , (  ) => {
+app.listen( port , (  ) => {
 	console.log( 'Server is started' );
 });
