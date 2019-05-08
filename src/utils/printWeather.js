@@ -1,8 +1,9 @@
-const WeatherReport = ( err , { currently : data }  ) => {
+const WeatherReport = ( err , { currently : data , hourly }  ) => {
 
-	response =  { summary : data.summary , 
-					Temprature : data.temperature , 
-				RainProbability : data.precipProbability
+	response =  { 	summary 		: hourly.summary , 
+					Temprature 		: data.temperature , 
+					RainProbability : data.precipProbability,
+					
 			}
 
 	return response

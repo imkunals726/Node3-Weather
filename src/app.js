@@ -55,6 +55,7 @@ app.get( '/weather' , ( req , res ) =>{
 			  longitude = features[ 0 ].center[ 1 ]
 
 		forecast( longitude , lattitude , ( err , data  ) =>{
+			//console.log( data );
 			JsonData = WeatherReport( err , data )
 			res.send( JsonData );
 		} )
